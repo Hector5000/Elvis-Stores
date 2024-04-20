@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="slider-container">
+        <div id="slider">
+            <div class="slide"><img src="img/slide-04.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="img/slide-04.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="img/slide-04.jpg" alt="Image 3"></div>
+            <!-- Add more slides as needed -->
+        </div>
+        <div id="prevBtn" onclick="prevSlide()">&#10094;</div>
+        <div id="nextBtn" onclick="nextSlide()">&#10095;</div>
+    
+        <div id="text-container">
+            <div id="main-text">Welcome to Our Website</div>
+            <div id="sub-text">Discover amazing content and services.</div>
+            <button id="styled-button">Learn More</button>
+        </div>
+    </div> 
+</body>
+
+
+<style>
+    .slider-tx{
+    font-size:xx-large;
+    font-family: serif;
+    position: absolute;
+    bottom: 100px;
+    color: #fefefe;
+    font-weight: 700;
+}
+
+#slider-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Set height to 100% of the viewport height */
+    overflow: hidden;
+}
+
+#slider {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#prevBtn, #nextBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nextBtn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+#text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 80%;
+    opacity: 0; /* Initial opacity set to 0 */
+    transition: opacity 0.8s ease-in-out;
+}
+
+#text-container.show {
+    opacity: 1; /* Opacity set to 1 during the show class */
+}
+
+#main-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out; /* Added fade-in animation */
+}
+
+#sub-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out; /* Added fade-in animation */
+}
+
+#styled-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: fadeIn 2s ease-in-out; /* Added fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+</style>
+<script>
+    hamburger = document.querySelector(".hamburger")
+    hamburger.onclick = function() {
+      navB = document.querySelector(".nav-b");
+      navB.classList.toggle("active");
+    }
+
+
+    let currentIndex = 0;
+    const slider = document.getElementById('slider');
+    const textContainer = document.getElementById('text-container');
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+        showText();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+        showText();
+    }
+
+    function updateSlider() {
+        const newTransformValue = -currentIndex * 100 + '%';
+        slider.style.transform = 'translateX(' + newTransformValue + ')';
+    }
+
+    function showText() {
+        textContainer.classList.remove('show');
+        setTimeout(() => {
+            textContainer.classList.add('show');
+        }, 100); // Delay the show class to allow transition
+    }
+
+    // Change slide every 3 seconds (adjust as needed)
+    setInterval(nextSlide, 3000);
+  </script>
+</html>

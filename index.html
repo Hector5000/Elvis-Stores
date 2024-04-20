@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" type="image/x-icon" href="img/icon.png">
+  <title>Elvis stores</title>
+
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo">
+      <span class="lg-name">Elvis stores</span>
+    </div>
+
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    
+    <nav class="nav-links">
+      <ul>
+        <li class="nv-line"><a href="index.html">Home</a></li>
+        <li class="nv-line"><a href="store.html">Store</a></li>
+        <li class="nv-line"><a href="store.html">About</a></li>
+        <li class="nv-line"><a href="#">Contact</a></li>
+        <li class="nv-line"><a href="#">Cart</a></li>
+      </ul>
+    </nav>
+
+    <nav class="nav-b">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HTML for Banner -->
+    <div class="slider">
+      <img src="img/slide1.png" class="slide active">
+      <img src="img/slide2.png" class="slide">
+      <img src="img/slide3.png" class="slide">
+      <img src="img/slide4.png" class="slide">
+      <img src="img/slide5.png" class="slide">
+      <img src="img/slide6.png" class="slide">
+      <div class="text-layer">
+        <div class="text-top">Exclusive Store</div>
+        <div class="text-bottom">Get one now!</div>
+        <button class="shop-now">Shop Now</button>
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+  <!-- end -->
+
+  <!-- assesories section -->
+  <div class="bale-text">
+    <h2>Accessories</h2>
+</div>
+  <section class="bale-section">
+    
+    <div class="bark-background"></div>
+    
+    <div class="box-container">
+        <div class="box" style="background-image: url(img/can-ass.jpeg);">
+            <p class="box-text">Shoes</p>
+            <button class="box-button">Shop Now</button>
+        </div>
+        <div class="box" style="background-image: url(img/cap-ass.jpeg);">
+            <p class="box-text">caps</p>
+            <button class="box-button">Shop Now</button>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box" style="background-image: url(img/jogger-ass.jpeg);">
+            <p class="box-text">Joggers</p>
+            <button class="box-button">Shop Now</button>
+        </div>
+        <div class="box" style="background-image: url(img/jacket-ass.jpeg);">
+            <p class="box-text">Jackets</p>
+            <button class="box-button">Shop Now</button>
+        </div>
+    </div>
+</section>
+<!-- end -->
+
+  <!-- sale section -->
+  <section class="sale-section">
+    
+    <div class="additional-text">
+        <p class="sale-big"> 45% Off</p>
+        <div class="sale-text">
+            <p class="sale-big">SALE</p>
+        </div>
+        <p>Just hurry up limited offer! Separated they live in Bookmarks grove <br> right at the coast of the Semantics, a large language ocean.</p>
+        <button class="shop-now-button">Shop Now</button>
+    </div>
+</section>
+<!-- end -->
+
+  <!-- new arrivals -->
+  <section></section>
+  <div class="nw-cont">
+    <div class="nw-line"></div>
+    <div class="nw-tx1">New Products</div>
+    <div class="nw-tx2">Be the first to purchase</div>
+  </div>
+
+  <div class="nw-container">
+    <div class="nw-card">
+        <img src="img/cap-new.jpeg" alt="Image 1">
+        <div class="nw-card-content">
+            <button class="new-button">New</button>
+            <div class="zoom-icon" onclick="zoomImage(this)">&#128065;</div>
+        </div>
+        <div class="nw-card-text">Cap</div>
+    </div>
+    <div class="nw-card">
+        <img src="img/jogger-new.jpeg" alt="Image 1">
+        <div class="nw-card-content">
+            <button class="new-button">New</button>
+            <div class="zoom-icon" onclick="zoomImage(this)">&#128065;</div>
+        </div>
+        <div class="nw-card-text">Joggers</div>
+    </div>
+    <div class="nw-card">
+        <img src="img/can-new.jpeg" alt="Image 1">
+        <div class="nw-card-content">
+            <button class="new-button">New</button>
+            <div class="zoom-icon" onclick="zoomImage(this)">&#128065;</div>
+        </div>
+        <div class="nw-card-text">Canvas</div>
+    </div>
+    <div class="nw-card">
+        <img src="img/jacket-new.jpeg" alt="Image 1">
+        <div class="nw-card-content">
+            <button class="new-button">New</button>
+            <div class="zoom-icon" onclick="zoomImage(this)">&#128065;</div>
+        </div>
+        <div class="nw-card-text">Jacket</div>
+    </div>
+    
+    <!-- Repeat for other cards -->
+</div>
+
+  <!-- end -->
+
+  <!-- Our Stores Section -->
+  <section class="bakery">
+    <div class="bakery-image">
+        <img src="img/store.jpg" alt="Bakery Image">
+    </div>
+    <div class="bakery-content">
+        <h2>Our Store</h2>
+        <p>Experience the aroma of freshly baked goodies that delight your taste buds.</p>
+        <p>At Slurp, our bakery is a haven for pastry enthusiasts. From flaky croissants to decadent cakes, we
+            craft every treat with passion and quality ingredients.</p>
+        <p>Indulge in a symphony of flavors and textures as you explore our array of mouthwatering baked goods,
+            all made with love and expertise.</p>
+    </div>
+</section>
+
+<!-- end -->
+<u><center style="font-size: x-large; font-family: imes New Roman;">Testimonial</center></u>
+
+  <section class="testimonial-section">
+    <div class="testimonial">
+        <p class="quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod, justo eget consectetur convallis."</p>
+        <p class="author">- John Doe</p>
+    </div>
+    <div class="testimonial">
+        <p class="quote">"i must make a trillion dollars."</p>
+        <p class="author">- johnpaul mba</p>
+    </div>
+    <!-- Add more testimonials as needed -->
+
+</section>
+
+<section class="newsletter-section">
+  <h2>Subscribe to our Newsletter</h2>
+  <form class="newsletter-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Shop</h3>
+            <ul>
+                <li><a href="#">Men's Clothing</a></li>
+                <li><a href="#">Women's Clothing</a></li>
+                <li><a href="#">Accessories</a></li>
+                <!-- Add more categories or links as needed -->
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus euismod.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <!-- Add more social media icons as needed -->
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Newsletter</h3>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <div>Crafted by Johnpaul Mba</div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
+
